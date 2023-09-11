@@ -73,7 +73,7 @@ export default function Home() {
       >
         <div className={styles.landing_page}>
           <div className={styles.top}>
-            <h3>Recycled Plastic</h3>
+            <h3>Recycled Plastic Plastic Plastic</h3>
             <button className={styles.btn_pc_screen}>ADD TO CART</button>
           </div>
           <div

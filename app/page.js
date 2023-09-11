@@ -22,7 +22,7 @@ export default function Home() {
   // const [screenSize, setScreenSize] = useState(getCurrentDimension());
   const SMALL_WIDTH = 545;
   const MED_WIDTH = 768;
-  const itemsPerPage = 2;
+  const itemsPerPage = 6;
   // screenSize.width <= SMALL_WIDTH ? 2 : screenSize.width <= MED_WIDTH ? 4 : 6;
   const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + itemsPerPage;

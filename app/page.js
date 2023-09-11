@@ -22,7 +22,7 @@ export default function Home() {
   // const [screenSize, setScreenSize] = useState(getCurrentDimension());
   const SMALL_WIDTH = 545;
   const MED_WIDTH = 768;
-  const itemsPerPage = 6;
+  const itemsPerPage = 2;
   // screenSize.width <= SMALL_WIDTH ? 2 : screenSize.width <= MED_WIDTH ? 4 : 6;
   const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + itemsPerPage;
@@ -73,7 +73,7 @@ export default function Home() {
       >
         <div className={styles.landing_page}>
           <div className={styles.top}>
-            <h3>Recycled Plastic Plastic Plastic</h3>
+            <h3>Recycled Plastic</h3>
             <button className={styles.btn_pc_screen}>ADD TO CART</button>
           </div>
           <div
@@ -97,9 +97,9 @@ export default function Home() {
             <div className={styles.left}>
               <h6>Materials people also use</h6>
               <div className={styles.images_details}>
-                <Image src={imageOne} />
-                <Image src={imageTow} />
-                <Image src={imageThree} />
+                <Image src={imageOne} width={100} />
+                <Image src={imageTow} width={100} />
+                <Image src={imageThree} width={100} />
               </div>
               <p>Details</p>
               <span

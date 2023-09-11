@@ -370,7 +370,7 @@
   }
 
   .landing_page .details .right small {
-    width: 100%;
+    width: 90%;
   }
 
   .landing_page .details .right {
@@ -388,6 +388,13 @@
   }
   .landing_page .img {
     height: 17rem;
+  }
+  .materials .materials_title span h4 {
+    font-size: 14px;
+  }
+
+  .materials .materials_title span p {
+    font-size: 13px;
   }
 }
 

@@ -19,11 +19,11 @@ export default function Home() {
   let filterData = products.filter((item) =>
     selected.length > 0 ? selected?.includes(item.category) : item
   );
-  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+  // const [screenSize, setScreenSize] = useState(getCurrentDimension());
   const SMALL_WIDTH = 545;
   const MED_WIDTH = 768;
-  const itemsPerPage =
-    screenSize.width <= SMALL_WIDTH ? 2 : screenSize.width <= MED_WIDTH ? 4 : 6;
+  const itemsPerPage = 6;
+  // screenSize.width <= SMALL_WIDTH ? 2 : screenSize.width <= MED_WIDTH ? 4 : 6;
   const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = filterData.slice(itemOffset, endOffset);
@@ -31,23 +31,23 @@ export default function Home() {
   let filters = ["glass", "steel", "plastic"];
   const [filterPopup, setFilterPopup] = useState(false);
 
-  function getCurrentDimension() {
-    return {
-      width: window.innerWidth,
-      height: window.innerHeight,
-    };
-  }
+  // function getCurrentDimension() {
+  //   return {
+  //     width: window.innerWidth,
+  //     height: window.innerHeight,
+  //   };
+  // }
 
-  useEffect(() => {
-    const updateDimension = () => {
-      setScreenSize(getCurrentDimension());
-    };
-    window.addEventListener("resize", updateDimension);
+  // useEffect(() => {
+  //   const updateDimension = () => {
+  //     setScreenSize(getCurrentDimension());
+  //   };
+  //   window.addEventListener("resize", updateDimension);
 
-    return () => {
-      window.removeEventListener("resize", updateDimension);
-    };
-  }, [screenSize]);
+  //   return () => {
+  //     window.removeEventListener("resize", updateDimension);
+  //   };
+  // }, [screenSize]);
 
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % products.length;
